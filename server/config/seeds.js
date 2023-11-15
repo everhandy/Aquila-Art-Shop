@@ -22,9 +22,6 @@ await User.create({
 
   console.log('users seeded');
 
-  process.exit();
-});
-
 const artwork = await Artwork.insertMany([
   {
     title: 'Mona Lisa',
@@ -70,3 +67,6 @@ const artwork = await Artwork.insertMany([
   },
 ])
 
+})
+
+process.exit()
