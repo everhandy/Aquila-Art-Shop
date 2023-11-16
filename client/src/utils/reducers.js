@@ -1,7 +1,16 @@
-
+import { useEffect, useContext, createContext} from "react";
 import { useReducer } from 'react';
 
 
+
+import { defaultState } from "./defaultState";
+
+//useEfect, useContext, createContext, will aid in cart/modals etc;
+// examples:
+
+//     const hideImageOverlay = () => {
+//     dispatch({ type: HIDE_OVERLAY })
+//   }
 
 
 import {
