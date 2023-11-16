@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-const { INTEGER } = require('sequelize');
 const { Schema } = mongoose;
 
 const artworkSchema = new Schema({

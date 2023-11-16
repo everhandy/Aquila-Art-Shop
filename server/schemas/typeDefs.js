@@ -12,8 +12,16 @@ type User {
     user: User
   }
 
+  type Artwork {
+  _id: ID
+  artist: String
+  title: String
+  image: String
+  }
+
   type Query {
-    user: User
+    artwork(_id: ID!): Artwork
+    user : User
   }
 
 type Mutation {
