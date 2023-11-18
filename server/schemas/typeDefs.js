@@ -1,10 +1,36 @@
 const typeDefs = `
 
-type User {
+  type Category {
+    _id: ID
+    name: String
+  }
+
+  type Product {
+    _id: ID
+    title: String
+    description: String
+    image: String
+    price: Float
+    artist: String
+    category: Category
+  }
+
+  type Order {
+    _id: ID
+    purchaseDate: String
+    products: [Product]
+  }
+
+  type User {
     _id: ID
     firstName: String
     lastName: String
     email: String
+    orders: [Order]
+  }
+
+  type Checkout {
+    session: ID
   }
 
   type Auth {
@@ -12,20 +38,26 @@ type User {
     user: User
   }
 
-  type Artwork {
-  _id: ID
-  artist: String
-  title: String
-  image: String
+  input ProductInput {
+    _id: ID
+    name: String
+    image: String
+    price: Float
+    quantity: Int
   }
 
   type Query {
-    artwork(_id: ID!): Artwork
-    user : User
+    categories: [Category]
+    products(category: ID, name: String): [Product]
+    product(_id: ID!): Product
+    user: User
+    order(_id: ID!): Order
+    checkout(products: [ProductInput]): Checkout
   }
 
-type Mutation {
+  type Mutation {
     addUser(firstName: String!, lastName: String!, email: String!, password: String!): Auth
+    addOrder(products: [ID]!): Order
     updateUser(firstName: String, lastName: String, email: String, password: String): User
     login(email: String!, password: String!): Auth
   }
