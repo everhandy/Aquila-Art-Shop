@@ -1,6 +1,16 @@
-import './Home.css';
+import React, { useState, useEffect } from "react";
+import Auth from "../utils/auth";
+import Splash from "../Components/Splash";
 
 const Home = () => {
+  const splash = [];
+
+  const [loggedIn, setLoggedIn] = useState(Auth.loggedIn());
+
+  useEffect(() => {
+    // update logged state when the auth changes
+    setLoggedIn(Auth.loggedIn());
+  }, []);
 
   // placeholder featured data
   const featuredArt = [
@@ -20,38 +30,52 @@ const Home = () => {
     { id: 6, title: "Artwork 6", imageUrl: "https://cdn.britannica.com/44/175344-050-267B3DF1/1A-oil-enamel-canvas-Jackson-Pollock-Museum-1948.jpg" },
     { id: 7, title: "Artwork 7", imageUrl: "https://collectionapi.metmuseum.org/api/collection/v1/iiif/437127/796089/restricted" },
     { id: 8, title: "Artwork 8", imageUrl: "https://cdn.britannica.com/10/182610-050-77811599/The-Persistence-of-Memory-canvas-collection-Salvador-1931.jpg" },
-  ]
+  ];
 
   return (
-    <div className="container">
-      <section className="artworks-section">
-        <h2>Featured Artwork</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        <div className="artwork-list">
-          {featuredArt.map((artwork) => (
-            <div key={artwork.id} className="featured-card">
-              <img src={artwork.imageUrl} alt={artwork.title} />
-              <p className="artwork-title">{artwork.title}</p>
-            </div>
-          ))}
-        </div>
-      </section>
+    <main>
+      {loggedIn && (
+        <div className="grid justify-center">
+          <div className="container">
+            <section className="artworks-section">
+              <h2>Featured Artwork</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              <div className="artwork-list">
+                {featuredArt.map((artwork) => (
+                  <div key={artwork.id} className="featured-card">
+                    <img src={artwork.imageUrl} alt={artwork.title} />
+                    <p className="artwork-title">{artwork.title}</p>
+                  </div>
+                ))}
+              </div>
+            </section>
 
-      <section className="artworks-section">
-        <h2>Gallery</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        <div className="artwork-list">
-          {GalleryArt.map((artwork) => (
-            <div key={artwork.id} className="gallery-card">
-              <img src={artwork.imageUrl} alt={artwork.title} />
-              <p className="artwork-title">{artwork.title}</p>
-            </div>
-          ))}
+            <section className="artworks-section">
+              <h2>Gallery</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              <div className="masonry-grid">
+                {GalleryArt.map((artwork, index) => (
+                  <div key={artwork.id} className={`gallery-card ${index % 3 === 0 ? 'large' : 'small'}`}>
+                    <img
+                      src={artwork.imageUrl}
+                      alt={artwork.title}
+                      className="h-auto max-w-full rounded-lg"
+                    />
+                    <p className="artwork-title">{artwork.title}</p>
+                  </div>
+                ))}
+              </div>
+            </section>
+          </div>
         </div>
-      </section>
-    </div>
+      )}
+      {!loggedIn && (
+        <div className="col-span-3">
+          <Splash splash={splash} />
+        </div>
+      )}
+    </main>
   );
 };
 
 export default Home;
-
