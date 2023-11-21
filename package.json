@@ -18,6 +18,14 @@
     },
     "dependencies": {
         "react-scripts": "^5.0.1",
-        "sass": "^1.69.5"
+        "sass": "^1.69.5",
+        "@apollo/server": "^4.7.1",
+        "bcrypt": "^5.1.1",
+        "express": "^4.17.2",
+        "graphql": "^16.6.0",
+        "jsonwebtoken": "^8.5.1",
+        "mongoose": "^7.0.2",
+        "stripe": "^8.67.0"
+
     }
 }

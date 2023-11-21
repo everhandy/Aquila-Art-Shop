@@ -28,7 +28,7 @@ await User.create({
     firstName: 'Testtwo',
     lastName: 'Testertwo',
     email: 'testtwo@testmail.com',
-    password: 'password12345',
+    password: 'password123456',
   });
 
   console.log('users seeded');

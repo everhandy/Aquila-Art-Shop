@@ -1,37 +1,133 @@
-const { User } = require("../models");
-const { signToken, AuthenticationError } = require("../utils/auth");
+const { User, Product, Category, Order } = require('../models');
+const { signToken, AuthenticationError } = require('../utils/auth');
+const stripe = require('stripe')('sk_test_4eC39HqLyjWDarjtT1zdp7dc');
 
-// Resolvers
 const resolvers = {
   Query: {
-    me: async (_, __, { req }) => {
-      if (!req.user) {
-        throw new AuthenticationError('Not authenticated');
+    categories: async () => {
+      return await Category.find();
+    },
+    products: async (parent, { category, name }) => {
+      const params = {};
+
+      if (category) {
+        params.category = category;
       }
 
-      return User.findById(req.user._id).select('-__v -password');
+      if (name) {
+        params.name = {
+          $regex: name,
+        };
+      }
+
+      return await Product.find(params).populate('category');
     },
-    users: async () => {
-      return User.find().select('-__v -password');
+    product: async (parent, { _id }) => {
+      return await Product.findById(_id).populate('category');
+    },
+    user: async (parent, args, context) => {
+      if (context.user) {
+        const user = await User.findById(context.user._id).populate({
+          path: 'orders.products',
+          populate: 'category',
+        });
+
+        user.orders.sort((a, b) => b.purchaseDate - a.purchaseDate);
+
+        return user;
+      }
+
+      throw AuthenticationError;
+    },
+    order: async (parent, { _id }, context) => {
+      if (context.user) {
+        const user = await User.findById(context.user._id).populate({
+          path: 'orders.products',
+          populate: 'category',
+        });
+
+        return user.orders.id(_id);
+      }
+
+      throw AuthenticationError;
+    },
+    checkout: async (parent, args, context) => {
+      const url = new URL(context.headers.referer).origin;
+      // We map through the list of products sent by the client to extract the _id of each item and create a new Order.
+      await Order.create({ products: args.products.map(({ _id }) => _id) });
+      const line_items = [];
+
+      for (const product of args.products) {
+        line_items.push({
+          price_data: {
+            currency: 'usd',
+            product_data: {
+              name: product.name,
+              description: product.description,
+              images: [`${url}/images/${product.image}`],
+            },
+            unit_amount: product.price * 100,
+          },
+          quantity: product.purchaseQuantity,
+        });
+      }
+
+      const session = await stripe.checkout.sessions.create({
+        payment_method_types: ['card'],
+        line_items,
+        mode: 'payment',
+        success_url: `${url}/success?session_id={CHECKOUT_SESSION_ID}`,
+        cancel_url: `${url}/`,
+      });
+
+      return { session: session.id };
     },
   },
   Mutation: {
     addUser: async (parent, args) => {
       const user = await User.create(args);
       const token = signToken(user);
-      console.log('Generated JWT:', token);
+
       return { token, user };
     },
+    addOrder: async (parent, { products }, context) => {
+      if (context.user) {
+        const order = new Order({ products });
+
+        await User.findByIdAndUpdate(context.user._id, {
+          $push: { orders: order },
+        });
+
+        return order;
+      }
+
+      throw AuthenticationError;
+    },
+    updateUser: async (parent, args, context) => {
+      if (context.user) {
+        return await User.findByIdAndUpdate(context.user._id, args, {
+          new: true,
+        });
+      }
+
+      throw AuthenticationError;
+    },
+  
     login: async (parent, { email, password }) => {
       const user = await User.findOne({ email });
 
-      if (!user || !(await user.isCorrectPassword(password))) {
-        throw new AuthenticationError('Incorrect credentials');
+      if (!user) {
+        throw AuthenticationError;
+      }
+
+      const correctPw = await user.isCorrectPassword(password);
+
+      if (!correctPw) {
+        throw AuthenticationError;
       }
 
       const token = signToken(user);
-      console.log('Generated JWT after login:', token);
-      console.log('Login successful');
+
       return { token, user };
     },
   },
