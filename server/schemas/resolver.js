@@ -87,6 +87,8 @@ const resolvers = {
     addUser: async (parent, args) => {
       const user = await User.create(args);
       const token = signToken(user);
+      console.log(`User created: ${user.email}`);
+      console.log(`JWT Token: ${token}`);
 
       return { token, user };
     },
@@ -128,6 +130,8 @@ const resolvers = {
 
       const token = signToken(user);
 
+      console.log(`ogged in: ${user.email}`);
+      console.log(`JWT Token: ${token}`);
       return { token, user };
     },
   },
