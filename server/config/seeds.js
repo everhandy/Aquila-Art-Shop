@@ -17,22 +17,6 @@ db.once('open', async () => {
 
 
 
-await User.create({
-    firstName: 'Test',
-    lastName: 'Tester',
-    email: 'test@testmail.com',
-    password: 'password12345',
-  });
-
-  await User.create({
-    firstName: 'Testtwo',
-    lastName: 'Testertwo',
-    email: 'testtwo@testmail.com',
-    password: 'password123456',
-  });
-
-  console.log('users seeded');
-
 const products = await Product.insertMany([
   {
     id: 1,
@@ -98,6 +82,7 @@ const products = await Product.insertMany([
     quantity: 5,
   },
 ]);
+console.log("products seeded");
 
 console.log('users seeded');
 
