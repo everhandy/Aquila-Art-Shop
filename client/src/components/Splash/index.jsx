@@ -14,12 +14,12 @@ const Splash = () => {
       id="loginsplash"
       className=" flex p-1 justify-center"
     >
-      <h3
+      <h1
         onClick={handleHeadingClick}
-        className={`btn flex flex-col  ${showLinks ? 'invisible' : ''}`}
+        className={`flex flex-col ${showLinks ? 'invisible' : ''}`}
       >
         Aquila
-      </h3>
+      </h1>
       {showLinks && (
         <>
           <Log />

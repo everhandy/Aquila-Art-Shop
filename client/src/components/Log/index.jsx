@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 function Log() {
   return (
     <div>
-      <ul className="">
+      <ul className="containlogin">
         <li>
           <Link to="/login" className="loginbtn rounded">
             Login

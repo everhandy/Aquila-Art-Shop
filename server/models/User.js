@@ -28,6 +28,21 @@ const userSchema = new Schema(
   }
 );
 
+userSchema.pre('save', async function (next) {
+  const shouldHashPassword = this.isNew || this.isModified('password');
+
+  if (shouldHashPassword) {
+    try {
+      const saltRounds = 10;
+      this.password = await bcrypt.hash(this.password, saltRounds);
+    } catch (error) {
+      return next(error);
+    }
+  }
+
+  next();
+});
+
 userSchema.methods.isCorrectPassword = async function (password) {
   return bcrypt.compare(password, this.password);
 };

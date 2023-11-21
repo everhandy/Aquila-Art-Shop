@@ -39,7 +39,7 @@ const Signup = () => {
   return (
     <main id="login" className="grow justify-center container">
       <div className="mb-5">
-        <p className="signhead">Log In</p>
+        <p className="signhead">Sign Up</p>
       </div>
 
       <div className="px-6 py-3 rounded w-64">

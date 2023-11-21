@@ -14,12 +14,10 @@
     "author": "",
     "license": "ISC",
     "devDependencies": {
-        "concurrently": "^5.1.0",
-        "eslint": "^8.54.0",
-        "eslint-plugin-react-refresh": "^0.4.4"
+        "concurrently": "^5.1.0"
     },
     "dependencies": {
         "react-scripts": "^5.0.1",
-        "three": "^0.158.0"
+        "sass": "^1.69.5"
     }
 }
