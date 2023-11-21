@@ -7,7 +7,7 @@ const Artists = () => {
             <div className="wrapper">
                 <h2 className="text-right">
                     <a>
-                        <span className="line">Artists</span>
+                        <span className="line linea">Artists</span>
                     </a>
                 </h2>
             </div>

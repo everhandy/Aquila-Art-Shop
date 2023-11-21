@@ -6,7 +6,7 @@ const Artworks = () => {
         <section id="my-works" className="block spacer m-top-xl">
             <div className="wrapper">
                 <h2>
-                    <span >Art <span className="line">Works</span></span>
+                    <span >Art <span className="line linea">Works</span></span>
                 </h2>
             </div>
 

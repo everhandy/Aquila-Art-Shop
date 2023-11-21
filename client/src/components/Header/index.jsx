@@ -17,12 +17,14 @@ const Header = () => {
           <a href="/" id="logo" className="w-16 shrink align-self-center mb-3">
             <h3>Aquila</h3>
           </a>
+          <div className="navbtn">
           <button
             className="rounded duration-500 hover:scale-105"
             onClick={logout}
           >
             Logout
           </button>
+          </div>
         </div>
       )}
     </nav>

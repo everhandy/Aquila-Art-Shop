@@ -1,9 +1,9 @@
 import React, { useState, useEffect, Fragment } from "react";
 import Auth from "../utils/auth";
-import Splash from "../components/Splash";
-import Title from '../components/Title/Index.jsx';
-import Artworks from '../components/Artworks/index.jsx';
-import Artists from '../components/Artists/index.jsx';
+import Splash from "../Components/Splash/index.jsx";
+import Title from '../Components/Title/Index.jsx';
+import Artworks from '../Components/Artworks/index.jsx';
+import Artists from '../Components/Artists/index.jsx';
 
 
 const Home = () => {

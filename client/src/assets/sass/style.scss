@@ -3,7 +3,7 @@
 @import "font";
 
 :root {
-  --nickel: #bcbcba;
+  --nickel: #e8e8e8;
   --code: #060606;
   --raven: #777b84;
   --lunar: #3a463d;
@@ -20,7 +20,11 @@ body,
 #root {
   width: 100%;
   height: 100%; 
-  background-color: white
+  background-color: var(--white)
+}
+
+a {
+  text-decoration: underline var(--lunar);
 }
 
 #root {
@@ -31,19 +35,19 @@ body,
 
 #loginsplash {
   font-size: 40px;
-  color: black;
+  color: var(--code);
 }
 
 .footer {
   width: auto;
-  background-color: white;
-  color: black;
+  background-color: var(--white);
+  color: var(--code);
 }
 
 /* login style */
 .loginbtn {
-  background-color: #2f313a;
-  color: white;
+  background-color: var(--code);
+  color: var(--nickel);
   font-size: 25px;
   margin-left: -190px;
   background-position-x: center;
@@ -52,6 +56,17 @@ body,
 #login {
   background-color: var(--white);
 }
+
+.navbtn {
+  border: 1px solid var(--code);
+  border-radius: 10%;
+  padding: 5px;
+}
+
+.navbtn:hover {
+    background: var(--code);
+    color: var(--nickel);
+  }
 
 /* container style */
 .container {
@@ -66,7 +81,12 @@ body,
 }
 
 .submitlog {
-  background-color: white;
+  background-color: var(--white);
+}
+
+.submitlog:hover {
+  background-color: var(--tuatara);
+  color: var(--nickel);
 }
 
 .errorlogin {
@@ -123,7 +143,6 @@ body,
 
 // card
 .card-post {
-    background-color: $body_background_color;
     border: 0;
     height: 100%;
     
@@ -143,11 +162,6 @@ body,
                 }
             }
         }
-    }
-    
-    // Is sticky
-    &.sticky {
-        box-shadow: -10px 20px 40px 0 rgba(0, 0, 0, 0.06);
     }
 }
 
@@ -176,7 +190,7 @@ body,
 // typography
 h1, h2, h3, h4, h5, h6 {
     font-family: $ubuntu_b;
-    color: $body_headline_color;
+    color: var(--code);
     margin-bottom: 1.01rem;
     
     &:last-child {
@@ -209,7 +223,9 @@ h1 {
     }   
 }
 
-
+.linea {
+    color: var(--nickel);
+}
 .line {
     position: relative;
     padding-left: 0.63rem;
@@ -218,7 +234,7 @@ h1 {
         
     &:before {
         content: '';
-        background: $body_main_element_color;
+        background: var(--tuatara);
         position: absolute;
         left: 0;
         bottom: 0.56rem;
@@ -376,7 +392,6 @@ p {
     
     .title-clone {
         font-family: $font_secondary_bold;
-        color: $body_text_clone_color;
         position: absolute;
         right: -22px;
         bottom: -95px;
@@ -591,7 +606,6 @@ p {
                     width: 100%;
                     height: 100%;
                     position: absolute;
-                    background-color: $gallery_item_background_color;
                     visibility: hidden;
                     transform: translateX(-100%);
                     transition: all 0.5s ease-in-out;
@@ -610,21 +624,13 @@ p {
                 }
                 
                 h1, h2, h3, h4, h5, h6 {
-                    color: $gallery_item_text_color;
+                    color: var(--nickel);
                     line-height: 1.18;
                     @include lhCrop-b(1.18, 0.75);
                     @include lhCrop-a(1.18, 0.75);
                     margin-bottom: 0;
                 }
-                
-                .btn {
-                    color: $gallery_item_text_color;
-                    position: absolute;
-                    bottom: $space_lg;
-                    right: $space_lg;
-                }
             }
-            
             .img {
                 &.object-fit {
                     margin-bottom: 0 !important;
