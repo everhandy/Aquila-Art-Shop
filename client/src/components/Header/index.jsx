@@ -18,7 +18,7 @@ const Header = () => {
             <h3>Aquila</h3>
           </a>
           <button
-            className="rounded duration-500 hover:scale-105"
+            className="rounded duration-500 hover:scale-105 mr-1"
             onClick={logout}
           >
             Logout
