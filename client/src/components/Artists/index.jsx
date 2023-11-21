@@ -1,5 +1,5 @@
 import React from 'react';
-import Artist from '../../artists';
+import Artist from '../../artists.json';
 
 const Artists = () => {
     return (
