@@ -16,8 +16,10 @@ db.once('open', async () => {
   console.log('categories seeded');
 
 
+
 const products = await Product.insertMany([
   {
+    id: 1,
     title: 'Mona Lisa',
     image: 'mona-lisa.jpg',
     price: 860000000.00,
@@ -26,6 +28,7 @@ const products = await Product.insertMany([
     quantity: 5,
   },
   {
+    id: 2,
     title: 'Starry Night',
     image: 'starry-night.jpg',
     price: 70000000.00,
@@ -34,6 +37,7 @@ const products = await Product.insertMany([
     quantity: 5,
   },
   {
+    id: 3,
     title: 'This Kiss',
     image: 'this-kiss.jpg',
     price: 36000.00,
@@ -42,6 +46,7 @@ const products = await Product.insertMany([
     quantity: 5,
   },
   {
+    id: 4,
     title: 'The School of Athens',
     image: 'the-school-of-athens.webp',
     price: 6000.00,
@@ -50,6 +55,7 @@ const products = await Product.insertMany([
     quantity: 5,
   },
   {
+    id: 5,
     title: 'Las Meninas',
     image: 'las-meninas.jpg',
     price: 40000.00,
@@ -58,6 +64,7 @@ const products = await Product.insertMany([
     quantity: 5,
   },
   {
+    id: 6,
     title: 'The birth of Venus',
     image: 'the-birth-of-venus.jpg',
     price: 500000000.00,
@@ -66,6 +73,7 @@ const products = await Product.insertMany([
     quantity: 5,
   },
   {
+    id: 7,
     title: 'Guernica',
     image: 'guernica.jpg',
     price: 200000000.00,
@@ -75,20 +83,6 @@ const products = await Product.insertMany([
   },
 ]);
 console.log("products seeded");
-
-  await User.create({
-    firstName: 'Test',
-    lastName: 'Tester',
-    email: 'test@testmail.com',
-    password: 'password12345',
-  });
-
-  await User.create({
-    firstName: 'Testtwo',
-    lastName: 'Testertwo',
-    email: 'testtwo@testmail.com',
-    password: 'password12345',
-  });
 
 console.log('users seeded');
 

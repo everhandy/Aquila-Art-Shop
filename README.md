@@ -6,7 +6,9 @@
       
 This collaborative coding project focuses on developing a MERN stack single-page application tailored for artists, aiming to create a fully-functional ecommerce platform. The project's core objectives include providing artists with a robust platform to showcase and sell their artwork, ensuring a user-friendly experience, integrating real-world data for authenticity, and implementing key features such as an artwork showcase, secure shopping cart, user authentication, and payment integration.
 
+
 Process Sitemap/Wireframe: 
+
 https://www.figma.com/file/smmbyplYY0dnfFFICAjewY/Team-4-UI%2FUX-Flowchart?type=design&node-id=0-1&mode=design&t=C45hL6xbSo5LUS00-0
 
 ## Table of Contents:

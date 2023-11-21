@@ -1,0 +1,33 @@
+@font-face {
+    font-family: 'Ubuntu-Bold';
+    src: url('../fonts/Ubuntu/Ubuntu-Bold/Ubuntu-Bold.eot');
+    src: url('../fonts/Ubuntu/Ubuntu-Bold/Ubuntu-Bold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Ubuntu/Ubuntu-Bold/Ubuntu-Bold.woff2') format('woff2'),
+         url('../fonts/Ubuntu/Ubuntu-Bold/Ubuntu-Bold.woff') format('woff'), 
+         url('../fonts/Ubuntu/Ubuntu-Bold/Ubuntu-Bold.ttf') format('truetype'),
+         url('../fonts/Ubuntu/Ubuntu-Bold/Ubuntu-Bold.svg#Ubuntu-Bold') format('svg');
+    font-style: normal;
+    font-weight: 700;
+    text-rendering: optimizeLegibility;
+}
+
+@mixin lhCrop-b($line-height, $capital-letter: 1) {
+    &:before {
+        content: '';
+        display: block;
+        height: 0;
+        width: 0;
+        margin-top: calc((#{$capital-letter} - #{$line-height}) * 0.5em);
+    }
+}
+
+@mixin lhCrop-a($line-height, $capital-letter: 1) {
+    &:after {
+        content: '';
+        display: block;
+        height: 0;
+        width: 0;
+        margin-bottom: calc((#{$capital-letter} - #{$line-height}) * 0.5em);
+    }
+}
+

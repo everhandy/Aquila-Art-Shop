@@ -1,0 +1,15 @@
+
+$retina:     "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)";
+$media_xxxl: "(min-width: 1920px)";
+$media_xxl:  "(max-width: 1700px)";
+$media_xl:   "(max-width: 1199px)";
+$media_lg:   "(max-width: 991px)";
+$media_md:   "(max-width: 767px)";
+$media_sm:   "(max-width: 575px)";
+
+$ubuntu_b: 'Ubuntu-Bold', sans-serif;
+$font_secondary_bold: $ubuntu_b;
+$space_lg: 3.75rem;  
+$transition-s: 0.3s;
+$body_links_hover_decoration: none;
+

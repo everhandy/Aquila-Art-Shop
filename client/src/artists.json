@@ -1,0 +1,21 @@
+[
+    {
+        "id": "1",
+        "title": "The Artist",
+        "imgLink": "https://i.imgur.com/Fmi93aq.png",
+        "imgAlt": "Artist 1"
+    },
+    {
+        "id": "2",
+        "title": "Highlight Event",
+        "imgLink": "https://i.imgur.com/g0PFJaf.png",
+        "imgAlt": "Artist 2"
+    },
+    {
+        "id": "3",
+        "title": "Extended Show",
+        "imgLink": "https://i.imgur.com/DU4IPN2.png",
+        "imgAlt": "Artist 3"
+    }
+]
+
