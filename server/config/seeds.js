@@ -24,7 +24,7 @@ await User.create({
   });
 
   await User.create({
-    username: 'Test',
+    username: 'Testtwo',
     email: 'testtwo@testmail.com',
     password: 'password123456',
   });
@@ -95,9 +95,18 @@ const products = await Product.insertMany([
     category: categories[0]._id,
     quantity: 5,
   },
+  {
+    id: 8,
+    title: 'Girl with a Pearl Earring',
+    image: 'https://cdn.britannica.com/33/194733-050-4CF75F31/Girl-with-a-Pearl-Earring-canvas-Johannes-1665.jpg',
+    price: 20000.00,
+    artist: 'Johannes Vermeer',
+    category: categories[0]._id,
+    quantity: 7,
+  }
 ]);
 
-console.log('users seeded');
+console.log('products seeded');
 
 process.exit()
 
