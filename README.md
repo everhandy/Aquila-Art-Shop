@@ -3,10 +3,16 @@
 # Aquila-Art-Shop
       
 ## Description:
-      
-This collaborative coding project focuses on developing a MERN stack single-page application tailored for artists, aiming to create a fully-functional ecommerce platform. The project's core objectives include providing artists with a robust platform to showcase and sell their artwork, ensuring a user-friendly experience, integrating real-world data for authenticity, and implementing key features such as an artwork showcase, secure shopping cart, user authentication, and payment integration.
+```     
+This collaborative coding project focuses on developing a MERN stack single-page application
+tailored for artists, aiming to create a fully-functional ecommerce platform.
+The project's core objectives include providing artists with a robust platform to
+showcase and sell their artwork, ensuring a user-friendly experience,
+integrating real-world data for authenticity, and implementing key features
+such as an artwork showcase, secure shopping cart, user authentication, and payment integration.
+```
 
-Process UI Sitempa wireframe Figma: 
+``Process UI Sitemap wireframe Figma:``
 https://www.figma.com/file/smmbyplYY0dnfFFICAjewY/Team-4-UI%2FUX-Flowchart?type=design&node-id=0-1&mode=design&t=C45hL6xbSo5LUS00-0
 
 ## Table of Contents:
@@ -31,7 +37,7 @@ n/a
   
 ## Usage:
   
-Flowchart Figma:
+``Interactive flowchart Figma:``
 https://www.figma.com/proto/smmbyplYY0dnfFFICAjewY/Team-4-UI%2FUX-Flowchart?type=design&node-id=36-424&t=C45hL6xbSo5LUS00-0&scaling=scale-down&page-id=0%3A1&starting-point-node-id=36%3A423
   
 ## License:
