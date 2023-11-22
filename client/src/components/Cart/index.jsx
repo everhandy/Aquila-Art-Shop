@@ -57,19 +57,19 @@ const Cart = ({ data }) => {
   function calculateTotal() {
     console.log('state:', state);
     if (!state || !state.cart || !Array.isArray(state.cart) || state.cart.length === 0) {
-      return '0.00'; // Return a default value or handle it as needed
+      return '0.00';
     }
 
     let sum = 0;
     state.cart.forEach((item) => {
-      if (item && typeof item.price === 'number' && typeof item.quantity === 'number') {
-        sum += item.price * item.quantity;
+      if (item && typeof item.price === 'number' && typeof item.purchaseQuantity === 'number') {
+        sum += item.price * item.purchaseQuantity;
       }
     });
-    console.log('state:', state);
     console.log('state.cart:', state.cart);
     return sum.toFixed(2);
-  }
+}
+
 
   useEffect(() => {
     if (data && data.checkout) {

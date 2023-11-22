@@ -2,47 +2,83 @@
     {
         "_id": "1",
         "title": "Noir Stroke",
-        "imgLink": "https://i.imgur.com/lcFfBW4.jpg"
+        "imgLink": "https://i.imgur.com/lcFfBW4.jpg",
+        "price": 5,
+        "artist": "Bob Ross",
+        "quantity": 1,
+        "category": 1
     },
     {
         "_id": "2",
         "title": "Black Canvas",
-        "imgLink": "https://i.imgur.com/oF15Dnx.png"
+        "imgLink": "https://i.imgur.com/oF15Dnx.png",
+        "price": 5,
+        "artist": "Bob Ross",
+        "quantity": 1,
+        "category": 1
     },
     {
         "_id": "3",
         "title": "Soleil",
-        "imgLink": "https://i.imgur.com/MyjyauW.png"
+        "imgLink": "https://i.imgur.com/MyjyauW.png",
+        "price": 5,
+        "artist": "Bob Ross",
+        "quantity": 1,
+        "category": 1
     },
     {
         "_id": "4",
         "title": "Currents",
-        "imgLink": "https://i.imgur.com/jZBJeh1.jpg"
+        "imgLink": "https://i.imgur.com/jZBJeh1.jpg",
+        "price": 5,
+        "artist": "Bob Ross",
+        "quantity": 1,
+        "category": 1
     },
     {
         "_id": "5",
         "title": "Dry Water",
-        "imgLink": "https://i.imgur.com/0EXMwAI.png"
+        "imgLink": "https://i.imgur.com/0EXMwAI.png",
+        "price": 5,
+        "artist": "Bob Ross",
+        "quantity": 1,
+        "category": 1
     },
     {
         "_id": "6",
         "title": "Composition",
-        "imgLink": "https://i.imgur.com/Hg0kwpi.png"
+        "imgLink": "https://i.imgur.com/Hg0kwpi.png",
+        "price": 5,
+        "artist": "Bob Ross",
+        "quantity": 1,
+        "category": 1
     },
     {
         "_id": "7",
         "title": "Reflection",
-        "imgLink": "https://i.imgur.com/UE7Wyux.png"
+        "imgLink": "https://i.imgur.com/UE7Wyux.png",
+        "price": 5,
+        "artist": "Bob Ross",
+        "quantity": 1,
+        "category": 1
     },
     {
         "_id": "8",
         "title": "Scatter",
-        "imgLink": "https://i.imgur.com/1ZZy9ZG.jpg"
+        "imgLink": "https://i.imgur.com/1ZZy9ZG.jpg",
+        "price": 5,
+        "artist": "Bob Ross",
+        "quantity": 1,
+        "category": 1
     },
     {
         "_id": "9",
         "title": "Particles",
-        "imgLink": "https://i.imgur.com/VtB3ADR.png"
+        "imgLink": "https://i.imgur.com/VtB3ADR.png",
+        "price": 5,
+        "artist": "Bob Ross",
+        "quantity": 1,
+        "category": 1
     }
 ]
 

@@ -31,17 +31,17 @@ import {
           cart: [...state.cart, ...action.products],
         };
   
-      case UPDATE_CART_QUANTITY:
-        return {
-          ...state,
-          cartOpen: true,
-          cart: state.cart.map(product => {
-            if (action._id === product._id) {
-              product.purchaseQuantity = action.purchaseQuantity
-            }
-            return product
-          })
-        };
+        case UPDATE_CART_QUANTITY:
+          return {
+            ...state,
+            cartOpen: true,
+            cart: state.cart.map(product => {
+              if (action._id === product._id) {
+                return { ...product, purchaseQuantity: action.purchaseQuantity };
+              }
+              return product;
+            })
+          };
   
       case REMOVE_FROM_CART:
         let newState = state.cart.filter(product => {

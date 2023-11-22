@@ -53,12 +53,7 @@ const Gallery = (props) => {
         iso.layout();
       });
     }, []);
-
-    // Added to check if gallery items have an id passed through
-    GalleryItemsData.forEach(item => {
-        console.log(item._id); // This should log a unique ID for each item
-      });
-      
+     
   
     return (
       <div className="gallery">
