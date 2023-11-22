@@ -57,9 +57,15 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 https://www.mit.edu/~amini/LICENSE.md
   
-## How to Contribute:
+## Contributions:
   
-n/a
+Designed by Freepik Free License Images.
+
+[Vince Peo](https://github.com/Vin7ag3)
+[Everett Handy](https://github.com/everhandy)
+[Matt Estin](https://github.com/mattestinb)
+[Tessa Andrews](https://github.com/tessaandrews)
+[Shayla Jade](https://github.com/Iamshaylajade)
   
 ## Tests:
   
