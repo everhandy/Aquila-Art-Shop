@@ -4,12 +4,7 @@ import Cart from '../Cart/index';
 import Toggler from '../Toggler';
 
 const Header = () => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
-
-  const toggleDarkMode = () => {
-    setIsDarkMode((prevMode) => !prevMode);
-    document.body.classList.toggle('dark-mode');
-  };
+  const [isDarkMode] = useState(false);
 
   const logout = (event) => {
     event.preventDefault();
