@@ -15,6 +15,9 @@ such as an artwork showcase, secure shopping cart, user authentication, and paym
 ``Process UI Sitemap wireframe Figma:``
 https://www.figma.com/file/smmbyplYY0dnfFFICAjewY/Team-4-UI%2FUX-Flowchart?type=design&node-id=0-1&mode=design&t=C45hL6xbSo5LUS00-0
 
+![Opera Snapshot_2023-11-22_013741_localhost](https://github.com/everhandy/Aquila-Art-Shop/assets/48032663/6663b615-c916-4f46-b822-8d8b82301eaa)
+
+
 ## Table of Contents:
   
 [Description](#description)
