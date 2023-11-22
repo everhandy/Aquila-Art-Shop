@@ -74,6 +74,10 @@ const Gallery = (props) => {
                     <h3>{item.title}</h3>
                     <button onClick={() => addToCart(item)}>Add to cart</button>
                   </div>
+                  <div>
+                    <h4>{item.artist}</h4>
+                    <h4>${item.price}</h4>
+                  </div>
                 </div>
               </div>
             ))}
