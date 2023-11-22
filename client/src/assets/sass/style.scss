@@ -102,6 +102,15 @@ a {
   color: var(--nickel);
 }
 
+.returnBtn {
+    background-color: var(--white);
+}
+
+.returnBtn:hover {
+  background-color: var(--tuatara);
+  color: var(--nickel);
+}
+
 .errorlogin {
   color: red;
   margin: 30px 0px 0px 0px
