@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useMutation } from "@apollo/client";
 import { ADD_USER } from "../utils/mutations";
 import Auth from "../utils/auth";
+import { useNavigate } from "react-router-dom";
 
 const Signup = () => {
 // state
@@ -13,6 +14,10 @@ const Signup = () => {
 
 // mutation hook
   const [addUser, { error }] = useMutation(ADD_USER);
+
+  // necessary for back button route
+  const history = useNavigate();
+
 
 // event handlers
   const handleChange = (event) => {
@@ -78,8 +83,12 @@ const Signup = () => {
 
           <div className="flex flex-col my-3">
             <button className="border submitlog rounded py-1">Submit</button>
+            <button className="border returnBtn rounded py-1"  onClick ={() => history('/')}>
+              Back
+            </button>
             {error && (
               <div className="errorlogin">
+
                 <span>
                   <b>Invalid: </b> Signup fail
                 </span>
