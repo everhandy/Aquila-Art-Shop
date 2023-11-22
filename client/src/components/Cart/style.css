@@ -34,7 +34,7 @@
 .cart-closed {
   position: fixed;
   top: 3%;
-  right: 6%;
+  right: 10%;
   font-size: 2rem;
   cursor: pointer;
   background-color: var(--secondary);
