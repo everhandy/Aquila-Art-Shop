@@ -15,6 +15,7 @@ const Title = () => {
                             'The',
                             1800,
                             'Gallery',
+                            1800,
                             ]}
                             wrapper='div'
                             repeat={Infinity}
