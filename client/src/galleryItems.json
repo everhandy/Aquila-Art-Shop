@@ -1,43 +1,48 @@
 [
     {
         "id": "1",
-        "title": "Mona Lisa",
-        "imgLink": "https://media.cnn.com/api/v1/images/stellar/prod/131107152744-mona-lisa.jpg?q=w_2000,h_3000,x_0,y_0,c_fill"
+        "title": "Noir Stroke",
+        "imgLink": "https://i.imgur.com/lcFfBW4.jpg"
     },
     {
         "id": "2",
-        "title": "Starry Night",
-        "imgLink": "https://aadsh2is.cdn.imgeng.in/optimized/cache/data/product_images/VG485-1000x1000.jpg"
+        "title": "Black Canvas",
+        "imgLink": "https://i.imgur.com/oF15Dnx.png"
     },
     {
         "id": "3",
-        "title": "This Kiss",
-        "imgLink": "https://www.gustav-klimt.com/images/paintings/The-Kiss.jpg"
+        "title": "Soleil",
+        "imgLink": "https://i.imgur.com/MyjyauW.png"
     },
     {
         "id": "4",
-        "title": "The School of Athens",
-        "imgLink": "https://framemark.vam.ac.uk/collections/2006BE8817/full/735,/0/default.jpg"
+        "title": "Currents",
+        "imgLink": "https://i.imgur.com/jZBJeh1.jpg"
     },
     {
         "id": "5",
-        "title": "Las Meninas",
-        "imgLink": "https://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2015/7/22/1437563116965/Las-Meninas--009.jpg?width=700&quality=85&auto=format&fit=max&s=b3316fd10dbef2b9646ee485afbc318a"
+        "title": "Dry Water",
+        "imgLink": "https://i.imgur.com/0EXMwAI.png"
     },
     {
         "id": "6",
-        "title": "The Birth of Venus",
-        "imgLink": "https://i.imgur.com/6QA5acg.jpeg"
+        "title": "Composition",
+        "imgLink": "https://i.imgur.com/Hg0kwpi.png"
     },
     {
         "id": "7",
-        "title": "Guernica",
-        "imgLink": "https://i.natgeofe.com/n/0adb5779-42cb-4a12-ab9c-fdb6498bee50/Main_Guernica_BAT-10313_16x9.jpg"
+        "title": "Reflection",
+        "imgLink": "https://i.imgur.com/UE7Wyux.png"
     },
     {
         "id": "8",
-        "title": "Girl with a Pearl Earring",
-        "imgLink": "https://cdn.britannica.com/33/194733-050-4CF75F31/Girl-with-a-Pearl-Earring-canvas-Johannes-1665.jpg"
+        "title": "Scatter",
+        "imgLink": "https://i.imgur.com/1ZZy9ZG.jpg"
+    },
+    {
+        "id": "9",
+        "title": "Particles",
+        "imgLink": "https://i.imgur.com/VtB3ADR.png"
     }
 ]
 

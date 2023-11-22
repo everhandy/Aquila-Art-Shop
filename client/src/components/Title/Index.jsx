@@ -8,7 +8,6 @@ const Title = () => {
                     <div className="col col-1 position-relative">
                         <div className="title">
                             <h1 className="h">Aquila</h1>
-                            <div className="title-clone">Art</div>
                         </div>
                         <div className="spacer p-top-lg">
                             <p className="p-large w-75">The Gallery</p>

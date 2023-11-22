@@ -1,5 +1,7 @@
 import React from "react";
 import Auth from "../../utils/auth";
+import Cart from "../Cart/index";
+
 // import { Link } from "react-router-dom";
 
 const Header = () => {
@@ -17,15 +19,20 @@ const Header = () => {
           <a href="/" id="logo" className="w-16 shrink align-self-center mb-3">
             <h3>Aquila</h3>
           </a>
+          <div className="cartico">
+            <button>
+              <Cart />
+            </button>
+          </div>
           <div className="navbtn">
-          <button
+            <button
             className="rounded duration-500 hover:scale-105 mr-1"
             onClick={logout}
           >
             Logout
           </button>
-          </div>
         </div>
+      </div>
       )}
     </nav>
   </div>

@@ -27,7 +27,6 @@ const Home = () => {
             <Title />
             <Artists />
             <Artworks />
-            <Cart />
           </main>
         </Fragment>
       )}
