@@ -4,7 +4,6 @@ import Splash from "../components/Splash";
 import Title from '../components/Title/Index.jsx';
 import Artworks from '../components/Artworks/index.jsx';
 import Artists from '../components/Artists/index.jsx';
-import Cart from "../components/Cart";
 
 const Home = () => {
   const splash = [];
@@ -15,7 +14,7 @@ const Home = () => {
     document.body.classList.add('bg-fixed');
     document.body.classList.add('bg-line');
 
-    // update logged state when the auth changes
+ // update logged state when the auth changes
     setLoggedIn(Auth.loggedIn());
   }, []);
 
