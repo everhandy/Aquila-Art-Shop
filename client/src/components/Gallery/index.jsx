@@ -72,7 +72,7 @@ const Gallery = (props) => {
                 <div className="gallery-hover">
                   <div className="gallery-hover-wrapper">
                     <h3>{item.title}</h3>
-                    <button onClick={() => addToCart(item)}>Add to cart</button>
+                    <button className="cartadd" onClick={() => addToCart(item)}>Add to cart</button>
                   </div>
                   <div>
                     <h4>{item.artist}</h4>
