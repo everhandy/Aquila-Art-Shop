@@ -1,0 +1,40 @@
+{
+  "slides": [
+    {
+      "src": "../../images/guernica.jpg",
+      "alt": "Image 1 for carousel",
+      "title": "artwork 1",
+      "price": "$50.00"
+    },
+    {
+      "src": "../../images/mona-lisa.jpg",
+      "alt": "Image 2 for carousel",
+      "title": "artwork 2",
+      "price": "$25.00"
+    },
+    {
+      "src": "../../images/starry-night.jpg",
+      "alt": "Image 3 for carousel",
+      "title": "artwork 3",
+      "price": "$10.00"
+    },
+    {
+      "src": "../../images/the-birth-of-venus.jpg",
+      "alt": "Image 4 for carousel",
+      "title": "artwork 4",
+      "price": "$112.00"
+    },
+    {
+      "src": "../../images/the-school-of-athens.jpg",
+      "alt": "Image 5 for carousel",
+      "title": "artwork 5",
+      "price": "$44.00"
+    },
+    {
+      "src": "../../images/this-kiss.jpg",
+      "alt": "Image 6 for carousel",
+      "title": "artwork 6",
+      "price": "$99.00"
+    }
+  ]
+}
