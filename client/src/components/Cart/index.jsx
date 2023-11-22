@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useCallback, useRef } from 'react';
 import { loadStripe } from '@stripe/stripe-js';
 import { useLazyQuery } from '@apollo/client';
 import { QUERY_CHECKOUT } from '../../utils/queries';
@@ -16,46 +16,27 @@ const Cart = ({ data }) => {
   const [state, dispatch] = useStoreContext();
   const buttonRef = useRef(null);
 
-  console.log('Rendering Cart component');
-
   const getCart = async () => {
     console.log('Getting cart...');
-    if (!state || !Array.isArray(state.cart)) {
-      return;
-    }
-
     const cart = await idbPromise('cart', 'get');
     console.log('Cart from idbPromise:', cart);
 
-    const updatedCart = cart.map((cartItem) => {
-      const product = state.cart.find((product) => product._id === cartItem._id);
-
-      if (!product) {
-        return null;
-      }
-
-      return {
-        _id: product._id,
-        title: product.title,
-        description: product.description,
-        image: product.image,
-        price: product.price,
-        artist: product.artist,
-        category: product.category,
-        quantity: cartItem.purchaseQuantity,
-      };
-    });
-
-    const filteredCart = updatedCart.filter((item) => item !== null);
-    console.log('Filtered cart:', filteredCart);
-
-    dispatch({ type: ADD_MULTIPLE_TO_CART, products: filteredCart });
+    dispatch({ type: ADD_MULTIPLE_TO_CART, products: cart });
   };
+
+  useEffect(() => {
+    async function fetchData() {
+      if (state.cartOpen) {
+        await getCart();
+      }
+    }
+
+    fetchData();
+  }, [state.cartOpen]);
 
   const [getCheckout, { data: checkoutData }] = useLazyQuery(QUERY_CHECKOUT);
 
   function calculateTotal() {
-    console.log('state:', state);
     if (!state || !state.cart || !Array.isArray(state.cart) || state.cart.length === 0) {
       return '0.00';
     }
@@ -66,7 +47,6 @@ const Cart = ({ data }) => {
         sum += item.price * item.purchaseQuantity;
       }
     });
-    console.log('state.cart:', state.cart);
     return sum.toFixed(2);
 }
 
@@ -83,7 +63,7 @@ const Cart = ({ data }) => {
 
   const submitCheckout = () => {
     if (!state || !state.cart || !Array.isArray(state.cart)) {
-      console.error('Cart is undefined or not an array');
+      console.error('Cart is empty');
       return;
     }
     getCheckout({
