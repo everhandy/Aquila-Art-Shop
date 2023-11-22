@@ -1,4 +1,4 @@
-import React, { useEffect, useCallback, useRef } from 'react';
+import React, { useEffect, useCallback, useRef, useState } from 'react';
 import { loadStripe } from '@stripe/stripe-js';
 import { useLazyQuery } from '@apollo/client';
 import { QUERY_CHECKOUT } from '../../utils/queries';
@@ -15,6 +15,7 @@ const stripePromise = loadStripe('pk_test_TYooMQauvdEDq54NiTphI7jx');
 const Cart = ({ data }) => {
   const [state, dispatch] = useStoreContext();
   const buttonRef = useRef(null);
+  const [checkoutSuccess, setCheckoutSuccess] = useState(false);
 
   const getCart = async () => {
     console.log('Getting cart...');
@@ -66,13 +67,30 @@ const Cart = ({ data }) => {
       console.error('Cart is empty');
       return;
     }
+  
+    // Map state.cart to the required structure
+    const products = state.cart.map((item) => ({
+      _id: item._id, 
+      name: item.title, 
+      imglink: item.imglink, 
+      price: item.price, 
+      artist: item.artist,
+      quantity: item.purchaseQuantity,
+      category: item.category, 
+    }));
+  
+    console.log('Checking out...', products);
     getCheckout({
       variables: {
-        products: state.cart.map((item) => ({
-          _id: item._id,
-          quantity: item.quantity,
-        })),
+        products: products,
       },
+    })
+    .then(() => {
+      // Checkout successful, set checkoutSuccess to true
+      setCheckoutSuccess(true);
+    })
+    .catch((error) => {
+      console.error('Error during checkout:', error);
     });
   };
 
@@ -109,6 +127,12 @@ const Cart = ({ data }) => {
                   <span>(log in to check out)</span>
                 )}
               </div>
+
+              {checkoutSuccess && (
+                <div className="checkout-success">
+                  <p>Checkout successful! Your order has been placed.</p>
+                </div>
+              )}
             </div>
           ) : (
             <h5>
