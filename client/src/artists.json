@@ -1,21 +1,51 @@
 [
     {
         "id": "1",
-        "title": "The Artist",
-        "imgLink": "https://i.imgur.com/Fmi93aq.png",
-        "imgAlt": "Artist 1"
+        "title": "Leonardo Da Vinci",
+        "imgLink": "https://i.guim.co.uk/img/media/f9e5d8ab7d0204ac070b7c16d175b71710d467d7/0_541_3004_1801/master/3004.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=dd574831415eac6e04a038a32aeacea2",
+        "imgAlt": "Leonardo Da Vinci"
     },
     {
         "id": "2",
-        "title": "Highlight Event",
-        "imgLink": "https://i.imgur.com/g0PFJaf.png",
-        "imgAlt": "Artist 2"
+        "title": "Vincent Van Gogh",
+        "imgLink": "https://www.vincentvangogh.org/images/van-gogh.jpg",
+        "imgAlt": "Vincent Van Gogh"
     },
     {
         "id": "3",
-        "title": "Extended Show",
-        "imgLink": "https://i.imgur.com/DU4IPN2.png",
-        "imgAlt": "Artist 3"
+        "title": "Gustav Klimt",
+        "imgLink": "https://i.imgur.com/eFvHPxX.jpeg",
+        "imgAlt": "Gustav Klimt"
+    },
+    {
+        "id": "4",
+        "title": "Raphael",
+        "imgLink": "https://c8.alamy.com/comp/2D7XCT5/antique-19th-century-illustration-depicting-self-portrait-of-raphael-italian-painter-and-architect-of-the-high-renaissance-1483-1520-engraving-p-2D7XCT5.jpg",
+        "imgAlt": "Raphael"
+    },
+    {
+        "id": "5",
+        "title": "Diego Velázquez",
+        "imgLink": "https://cdn.britannica.com/49/135049-050-60B2F157/Diego-Velazquez-portrait-engraving.jpg",
+        "imgAlt": "Diego Velázquez"
+    },
+    {
+        "id": "6",
+        "title": "Sandro Botticelli",
+        "imgLink": "https://sothebys-com.brightspotcdn.com/dims4/default/027c29a/2147483647/strip/false/crop/703x703+0+0/resize/900x900!/quality/90/?url=http%3A%2F%2Fsothebys-brightspot.s3.amazonaws.com%2Fdotcom%2Faa%2Fe5%2Fffbac0f74d4f8083c7da25d3db03%2F116n10607-6qkwh-comp-resize482.jpg",
+        "imgAlt": "Sandro Botticelli"
+    },
+    {
+        "id": "7",
+        "title": "Pablo Picasso",
+        "imgLink": "https://s.hdnux.com/photos/20/12/20/4236333/6/rawImage.jpg",
+        "imgAlt": "Pablo Picasso"
+    },
+    {
+        "id": "8",
+        "title": "Johannes Vermeer",
+        "imgLink": "https://upload.wikimedia.org/wikipedia/commons/7/75/Johannes_Vermeer_007_black_and_white_01.jpg",
+        "imgAlt": "Johannes Vermeer"
     }
 ]
 
