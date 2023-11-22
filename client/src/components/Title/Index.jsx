@@ -1,4 +1,5 @@
 import React from 'react';
+import { TypeAnimation } from 'react-type-animation';
 
 const Title = () => {
     return (
@@ -7,11 +8,19 @@ const Title = () => {
                 <div className="row">
                     <div className="col col-1 position-relative">
                         <div className="title">
-                            <h1 className="h">Aquila</h1>
+                            <h1 className="">Aquila</h1>
                         </div>
-                        <div className="spacer p-top-lg">
-                            <p className="p-large w-75">The Gallery</p>
-                        </div>
+                        <TypeAnimation
+                            sequence={[
+                            'The',
+                            1800,
+                            'Gallery',
+                            ]}
+                            wrapper='div'
+                            repeat={Infinity}
+                            style={{ fontSize: "25px" }}
+                            className="p-large w-75"
+                         />
                     </div>
                     <div className="col col-2 d-none d-sm-block">
                         <div className="d-flex">

@@ -26,7 +26,8 @@
     "react-router-dom": "^6.11.2",
     "vitest": "^0.31.4",
     "zustand": "^4.4.6",
-    "imagesloaded": "^5.0.0"
+    "imagesloaded": "^5.0.0",
+    "react-type-animation": "^3.0.1"
   },
   "devDependencies": {
     "@types/react": "^18.0.37",
