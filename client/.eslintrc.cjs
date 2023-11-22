@@ -1,6 +1,6 @@
 module.exports = {
   env: { browser: true, es2020: true },
-  extends: ['react-app'],
+  extends: ['plugin:react-refresh/recommended', 'react-app'],
   parserOptions: { ecmaVersion: 'latest', sourceType: 'module' },
   settings: {
     react: {

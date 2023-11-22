@@ -19,7 +19,8 @@
     "devDependencies": {
         "concurrently": "^5.1.0",
         "eslint": "^8.54.0",
-        "eslint-plugin-react": "^7.33.2"
+        "eslint-plugin-react": "^7.33.2",
+        "eslint-plugin-react-refresh": "^0.4.4"
     },
     "dependencies": {
         "@apollo/server": "^4.7.1",
