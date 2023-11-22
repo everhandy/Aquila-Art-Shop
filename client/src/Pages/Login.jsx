@@ -2,10 +2,14 @@ import React, { useState } from 'react';
 import { useMutation } from "@apollo/client";
 import { LOGIN_USER } from "../utils/mutations";
 import Auth from "../utils/auth";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
 // state form input values
   const [formState, setFormState] = useState({ email: "", password: "" });
+
+  // use history hook for returning to home page
+  const history = useNavigate();
 
 // mutation for login
   const [login, { error }] = useMutation(LOGIN_USER);
@@ -76,6 +80,9 @@ const Login = () => {
           <div className="flex flex-col my-3">
             <button className="border submitlog rounded py-1">
               Submit
+            </button>
+            <button className="border returnBtn rounded py-1"  onClick ={() => history('/')}>
+              Back
             </button>
             {error && (
               <div className='errorlogin'>
